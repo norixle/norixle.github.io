@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,8 +21,8 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            justify-content: center; 
-            align-items: center; 
+            justify-content: center;
+            align-items: center;
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -33,23 +33,18 @@
             overflow: hidden;
         }
 
-        .welcome-section h2,
-        .agenda-section h2,
-        .guideline-section h2,
-        .registration-section h2 {
-            font-weight: bold; 
-        }
-
-        .welcome-section,
-        .agenda-section,
-        .guideline-section,
-        .registration-section {
+        .section {
             background-color: #333;
             padding: 20px;
             text-align: left;
-            display: none; 
-            font-size: 12px; 
-            width: 100%; 
+            display: none;
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .section h2 {
+            font-weight: bold;
+            font-size: 16px; /* Adjust the font size as needed */
         }
 
         .link-container {
@@ -64,6 +59,21 @@
             font-weight: bold;
             color: white;
         }
+
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-images img {
+            max-width: 50%;
+            height: auto;
+            margin: 0 10px 10px 0;
+            border-radius: 8px;
+        }
+
+
     </style>
 
     <!-- Add Montserrat font -->
@@ -72,8 +82,8 @@
 
 <body>
     <!-- Welcome Section -->
-    <div id="welcome-section" class="container welcome-section">
-         <p><strong>Dear VGU Students,</strong></p>
+    <div id="welcome-section" class="container section">
+ <p><strong>Dear VGU Students,</strong></p>
         <p>Welcome to the Industrial Visits Program 2024! Our industrial visits are designed to offer you valuable insights into real-world professional environments, enriching your academic journey.</p>
         <p><strong>Purpose:</strong></p>
         <p>The primary goal of our industrial visits is to complement your classroom learning with practical exposure to industry operations. By witnessing firsthand how theories are applied in real-world settings, you gain a deeper understanding of your field of study. These visits also aim to foster essential skills such as problem-solving, critical thinking, and effective communication.</p>
@@ -85,21 +95,49 @@
     </div>
 
     <!-- Agenda Section -->
-    <div id="agenda-section" class="container agenda-section">
-        <h2>Agenda Section Title</h2>
+    <div id="agenda-section" class="container section">
         <!-- ... Your content here ... -->
     </div>
 
     <!-- Guideline Section -->
-    <div id="guideline-section" class="container guideline-section">
-        <h2>Guideline Section Title</h2>
+    <div id="guideline-section" class="container section">
         <!-- ... Your content here ... -->
     </div>
 
     <!-- Registration Section -->
-    <div id="registration-section" class="container registration-section">
-        <h2>Registration Section Title</h2>
+    <div id="registration-section" class="container section">
         <!-- ... Your content here ... -->
+    </div>
+
+    <!-- Upcoming Section -->
+    <div id="upcoming-section" class="container section">
+        <ul>
+            <li><a href="https://www.schaeffler.vn/vi/" target="_blank">Schaeffler Vietnam</a></li>
+            <li><a href="https://www.se.com/vn/vi/" target="_blank">Schneider Electric Vietnam</a></li>
+            <li><a href="https://hunterdouglasvn.com/" target="_blank">Hunter Douglas Vietnam</a></li>
+            <li><a href="https://www.bmwindows.vn/" target="_blank">BM Windows</a></li>
+            <li><a href="https://www.hsbc.com.vn/" target="_blank">HSBC Bank</a></li>
+            <!-- Add more upcoming events as needed -->
+        </ul>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery-section" class="container section">
+        <h2>Gallery Section Title</h2>
+        <div class="gallery-images">
+            <img src="https://i.pinimg.com/originals/1c/90/5a/1c905a0f7a886f177df45f6c1cf51ee8.jpg" alt="Image 1">
+            <img src="https://i.pinimg.com/originals/7f/0b/46/7f0b46d55324442ed3dcd1ac338dab9e.jpg" alt="Image 2">
+            <img src="https://i.pinimg.com/originals/d6/d8/ae/d6d8ae17ebf4f3c99f8915e791aba635.jpg" alt="Image 3">
+            <img src="https://i.pinimg.com/originals/9b/37/7a/9b377ae711f06f88536a411bb57bff43.jpg" alt="Image 4">
+            <img src="https://i.pinimg.com/originals/d0/ce/91/d0ce918ff3469ea4ccadba730dfa36e3.jpg" alt="Image 5">
+            <img src="https://i.pinimg.com/originals/3e/e9/6e/3ee96ef79d20a3291bc9cb77db41394b.jpg" alt="Image 6">
+            <img src="https://i.pinimg.com/originals/36/34/88/3634888bb46e025121cc42a2af4ccee5.jpg" alt="Image 7">
+        </div>
+    </div>
+
+    <!-- For Company Section -->
+    <div id="for-company-section" class="container section">
+        <a href="https://forms.gle/Bas7BFXf8N63Ew6m6" target="_blank" class="btn for-company-link">For Company</a>
     </div>
 
     <div class="link-container">
@@ -107,58 +145,68 @@
         <a href="#" class="btn welcome-link">Welcome</a>
 
         <!-- Agenda Link -->
-        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQlf2ZU6On22VuLYdo_3OP1tSKTbm9-K93K39Va7iV5EyIKFqdOlkDaS5Xmf-5HdnUc8ouKFYJyBQtS/pubhtml?gid=1019862669&single=true" target="_blank" class="btn agenda-link">Agenda</a>
+        <a href="#" target="_blank" data-section="agenda-section" class="btn agenda-link">Agenda</a>
 
         <!-- Guideline Link -->
-        <a href="https://docs.google.com/document/d/e/2PACX-1vQZ56zpi2ea2G-i0zErU0AL0OwcoF4hfN8IaW0DDX2aPqPObafEnOEcnHei6dfxZQChCcEDp8bkZ9bH/pub" target="_blank" class="btn guideline-link">Guideline</a>
+        <a href="#" target="_blank" data-section="guideline-section" class="btn guideline-link">Guideline</a>
 
         <!-- Registration Link -->
-        <a href="https://forms.gle/jBuPGXCpHeRbWAXJ8" target="_blank" class="btn registration-link">Registration</a>
+        <a href="#" target="_blank" data-section="registration-section" class="btn registration-link">Registration</a>
+
+        <!-- Upcoming Link -->
+        <a href="#" target="_blank" data-section="upcoming-section" class="btn upcoming-link">Upcoming</a>
+
+        <!-- Gallery Link -->
+        <a href="#" target="_blank" data-section="gallery-section" class="btn gallery-link">Gallery</a>
+
+        <!-- For Company Link -->
+        <a href="#" target="_blank" data-section="for-company-section" class="btn for-company-link">For Company</a>
     </div>
 
     <!-- Add Bootstrap 5 JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        // Hide all sections except the welcome section
-        $(".agenda-section, .guideline-section, .registration-section").hide();
+    <script>
+        $(document).ready(function () {
+            $(".section").hide();
 
-        // Toggle sections on link click
-        $(".btn").click(function (e) {
-            e.preventDefault();
+            $(".btn").click(function (e) {
+                e.preventDefault();
 
-            // Get the section ID based on the clicked link
-            var sectionId = $(this).attr("class").split(" ")[1];
+                var sectionId = $(this).data("section");
 
-            // Hide all sections except the welcome section
-            if (sectionId !== "welcome-link") {
-                $(".welcome-section").slideUp();
-            }
+                if (sectionId !== "welcome-section") {
+                    $(".welcome-section").slideUp();
+                }
 
-            // Check if the link has an href attribute
-            var linkHref = $(this).attr("href");
-            if (sectionId !== "welcome-link" && linkHref) {
-                // Open the link in a new tab
-                window.open(linkHref, '_blank');
-            } else {
-                // Toggle the corresponding section if no href attribute
-                $("#" + sectionId).slideToggle();
-            }
+                $(".section").hide();
+                $("#" + sectionId).slideDown();
+
+                // Open links in new tabs for Agenda, Guideline, Registration, For Company
+                if (sectionId === "agenda-section") {
+                    window.open("https://docs.google.com/spreadsheets/d/e/2PACX-1vQlf2ZU6On22VuLYdo_3OP1tSKTbm9-K93K39Va7iV5EyIKFqdOlkDaS5Xmf-5HdnUc8ouKFYJyBQtS/pubhtml?gid=1019862669&single=true", "_blank");
+                } else if (sectionId === "guideline-section") {
+                    window.open("https://docs.google.com/document/d/e/2PACX-1vQZ56zpi2ea2G-i0zErU0AL0OwcoF4hfN8IaW0DDX2aPqPObafEnOEcnHei6dfxZQChCcEDp8bkZ9bH/pub", "_blank");
+                } else if (sectionId === "registration-section") {
+                    window.open("https://forms.gle/jBuPGXCpHeRbWAXJ8", "_blank");
+                } else if (sectionId === "for-company-section") {
+                    window.open("https://forms.gle/Bas7BFXf8N63Ew6m6", "_blank");
+                }
+
+                // Update Gallery Section Title
+                if (sectionId === "gallery-section") {
+                    $("#gallery-section h2").text("Gallery");
+                }
+            });
+
+		$(".welcome-link").click(function () {
+  	  $("#welcome-section").slideToggle();
+   	 $(".section:not(#welcome-section)").slideUp();
+		});
+
         });
-
-        // Additional handling for the "Welcome" link
-        $(".welcome-link").click(function () {
-            // Show the welcome section and hide others
-            $(".welcome-section").slideToggle();
-            $(".agenda-section, .guideline-section, .registration-section").slideUp();
-        });
-    });
-</script>
-
-
-
+    </script>
 </body>
 
 </html>
